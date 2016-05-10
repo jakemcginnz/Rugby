@@ -106,49 +106,13 @@
 
     <!-- Page Content -->
     <br><br><br>
-    <div class="container">
-
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="panel panel-primary">
-      <div class="panel-heading">
-        <h3 id='questionText' class="panel-title">
-            Question Goes Here
-          </h3>
-      </div>
-      <div class="panel-body">
-        <div class="radio">
-          <label>
-            <input class="radioButton" type="radio" name="optRadio" ><p id="choice1"> Option 1 </p>
-          </label>
-        </div>
-        <div class="radio">
-          <label>
-            <input class="radioButton" type="radio" name="optRadio" ><p id="choice2"> Option 2 </p>
-          </label>
-        </div>
-        <div class="radio">
-          <label>
-            <input class="radioButton" type="radio" name="optRadio" ><p id="choice3"> Option 3 </p>
-          </label>
-        </div>
-        <div class="radio">
-          <label>
-            <input class="radioButton" type="radio" name="optRadio" ><p id="choice4"> Option 4 </p>
-          </label>
-        </div>
-      </div>
-      <div class="panel-footer">
-        <a class="btn btn-primary " role="button" onclick="buttonClicked()">Next</a>
-      </div>
-    </div>
-    <div class="col-md-1 column">
-    </div>
-  </div>
-</div>
-            </div>
-        </div>
-
+    <form action="action_page.php">
+  First name:<br>
+  <input type="text" name="firstname" value="Mickey"><br>
+  Last name:<br>
+  <input type="text" name="lastname" value="Mouse"><br><br>
+  <button type="button" class="btn btn-primary">Primary</button>
+</form>
         <hr>
 
         <!-- Footer -->
