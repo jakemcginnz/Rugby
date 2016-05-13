@@ -105,39 +105,17 @@
     </header>
 
     <!-- Page Content -->
-    <br><br><br>
-    <div class="row">
-        <div class="col-md-2 col-md-offset-5">
-    <form id="playerinfo" onsubmit="playerProfile()">
-  <fieldset class="form-group">
-    <label for="formGroupExampleInput">Full name</label>
-    <input type="text" class="form-control" id="fullname" placeholder="First Last">
-  </fieldset>
-  <select id = "grade" form="playerinfo">
-    <option value="Blank"></option>
-    <option value="Freshman">Freshman</option>
-    <option value="Sophmore">Sophmore</option>
-    <option value="Junior">Junior</option>
-    <option value="Senior">Senior</option>
-  </select>
-  <select id = "position" form="playerinfo">
-    <option value="Blank"></option>
-    <option value="Prop">Prop</option>
-    <option value="Hooker">Hooker</option>
-    <option value="Flanker">Flanker</option>
-    <option value="Lock">Lock</option>
-    <option value="8">8</option>
-    <option value="Scrumhalf">Scrumhalf</option>
-    <option value="Flyhalf">Flyhalf</option>
-    <option value="Center">Center</option>
-    <option value="Fullback">Fullback</option>
-    <option value="Wing">Wing</option>
-  </select>
-  <button id="go" type="submit" form="">Create profile</button>
-</form>
-</div>
-</div>
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-12">
+                <h1>Greenwich Rugby</h1>
+                <p>Greenwich high school rugby was started in the 1980s and has been growing strong since. On April 23rd they beat Xavier, a school previously ranked number 6 in the country.</p>
+            </div>
+        </div>
+
         <hr>
+
         <!-- Footer -->
         <footer>
             <div class="row">
@@ -147,30 +125,23 @@
             </div>
             <!-- /.row -->
         </footer>
+
     </div>
     <!-- /.container -->
+
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
+
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+
     <!-- Script to Activate the Carousel -->
     <script>
     $('.carousel').carousel({
         interval: 5000 //changes the speed
     })
-
-    function playerProfile(){
-
-        var name = document.getElementById('fullname');
-        var grade = document.getElementById('grade');
-        var position = document.getElementById('position');
-        var button = document.getElementById('go');
-        
-        document.write(name);
-        document.write(grade);
-        document.write(position);
-
-    }
     </script>
+
 </body>
+
 </html>
