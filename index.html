@@ -207,4 +207,9 @@ firebase.auth().signInWithPopup(provider).then(function(result) {
 });
 </script>
 <button type="button" class="btn btn-primary" onclick="firebase.auth().signInWithRedirect(provider);">Sign In</button>
+<button type="button" class="btn btn-primary" onclick="firebase.auth().signOut().then(function() {
+  // Sign-out successful.
+}, function(error) {
+  // An error happened.
+});">Sign Out</button>
 </html>
