@@ -16,9 +16,9 @@ provider.addScope('https://www.googleapis.com/auth/plus.login');
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     console.log("signed in");
-    document.getElementById("signInStatus").innerHTML = "Signed in"
+    document.getElementById("signInStatus").innerHTML = "Signed in";
   } else {
     console.log("not signed in");
-    document.getElementById("signInStatus").innerHTML = "Not signed in"
+    document.getElementById("signInStatus").innerHTML = "Not signed in";
   }
 });
