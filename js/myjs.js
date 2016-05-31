@@ -21,4 +21,4 @@ firebase.auth().onAuthStateChanged(function(user) {
     console.log("not signed in");
     document.getElementById("signInStatus").innerHTML = "Not signed in";
   }
-});
+})
