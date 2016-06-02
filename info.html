@@ -1,46 +1,6 @@
 <!DOCTYPE html>
-
-<script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyClfPujQbkf6UWwa7CA84gc5_W3ZJUwwic",
-    authDomain: "rugby-1315.firebaseapp.com",
-    databaseURL: "https://rugby-1315.firebaseio.com",
-    storageBucket: "rugby-1315.appspot.com",
-  };
-  firebase.initializeApp(config);
-  firebase.auth().getRedirectResult().then(function(result) {
-  if (result.credential) {
-    // This gives you a Google Access Token. You can use it to access the Google API.
-    var token = result.credential.accessToken;
-    // ...
-  }
-  // The signed-in user info.
-  var user = result.user;
-}).catch(function(error) {
-  // Handle Errors here.
-  var errorCode = error.code;
-  var errorMessage = error.message;
-  // The email of the user's account used.
-  var email = error.email;
-  // The firebase.auth.AuthCredential type that was used.
-  var credential = error.credential;
-  // ...
-});
-</script>
-    
 <html lang="en">
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-77776762-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
 <head>
 
     <meta charset="utf-8">
@@ -65,6 +25,7 @@
     <![endif]-->
 
 </head>
+
 <body>
 
     <!-- Navigation -->
@@ -87,10 +48,10 @@
                         <a href="about.html">About</a>
                     </li>
                     <li>
-                        <a href="info.html">Info</a>
+                        <a href="info.html">Roster Form</a>
                     </li>
                     <li>
-                        <a id="status" class="glyphicon glyphicon-user"> href="#">Login</a>
+                        <a href="#">Login</a>
                     </li>
                 </ul>
             </div>
@@ -144,17 +105,23 @@
     </header>
 
     <!-- Page Content -->
-    <div class="container">
-
-        <div class="row">
-            <div class="col-lg-12">
-                <h1>Greenwich Rugby</h1>
-                <p>Greenwich high school rugby was started in the 1980s and has been growing strong since. On April 23rd they beat Xavier, a school previously ranked number 6 in the country.</p>
-            </div>
-        </div>
-
+    <br><br><br>
+    <div class="row">
+ -        <div class="col-md-2 col-md-offset-5">
+<form class="form-inline">
+  <div class="form-group">
+    <label for="exampleInputName2">Name</label>
+    <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail2">Email</label>
+    <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
+  </div>
+  <button type="submit" class="btn btn-primary">Send invitation</button>
+</form>
+</div>
+</div>
         <hr>
-
         <!-- Footer -->
         <footer>
             <div class="row">
@@ -164,32 +131,32 @@
             </div>
             <!-- /.row -->
         </footer>
-
     </div>
     <!-- /.container -->
-
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
-
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/myjs.js"></script>
-
     <!-- Script to Activate the Carousel -->
     <script>
     $('.carousel').carousel({
         interval: 5000 //changes the speed
     })
-    </script>
 
+    function playerProfile(){
+
+        var name = document.getElementById('fullname');
+        var grade = document.getElementById('grade');
+        var position = document.getElementById('position');
+        var button = document.getElementById('go');
+        
+        console.log(name);
+        
+        document.write(name);
+        document.write(grade);
+        document.write(position);
+
+    }
+    </script>
 </body>
-    
-<script src="js/myjs.js"></script>
-<script src="https://apis.google.com/js/platform.js" async defer></script>
-<button type="button" class="btn btn-primary" onclick="firebase.auth().signInWithRedirect(provider);">Sign In With Google</button>
-<button type="button" class="btn btn-primary" onclick="firebase.auth().signOut().then(function() {
-  // Sign-out successful.
-}, function(error) {
-  // An error happened.
-});">Sign Out Of Google</button>
 </html>

@@ -1,46 +1,6 @@
 <!DOCTYPE html>
-
-<script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyClfPujQbkf6UWwa7CA84gc5_W3ZJUwwic",
-    authDomain: "rugby-1315.firebaseapp.com",
-    databaseURL: "https://rugby-1315.firebaseio.com",
-    storageBucket: "rugby-1315.appspot.com",
-  };
-  firebase.initializeApp(config);
-  firebase.auth().getRedirectResult().then(function(result) {
-  if (result.credential) {
-    // This gives you a Google Access Token. You can use it to access the Google API.
-    var token = result.credential.accessToken;
-    // ...
-  }
-  // The signed-in user info.
-  var user = result.user;
-}).catch(function(error) {
-  // Handle Errors here.
-  var errorCode = error.code;
-  var errorMessage = error.message;
-  // The email of the user's account used.
-  var email = error.email;
-  // The firebase.auth.AuthCredential type that was used.
-  var credential = error.credential;
-  // ...
-});
-</script>
-    
 <html lang="en">
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-77776762-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
 <head>
 
     <meta charset="utf-8">
@@ -65,6 +25,7 @@
     <![endif]-->
 
 </head>
+
 <body>
 
     <!-- Navigation -->
@@ -87,10 +48,10 @@
                         <a href="about.html">About</a>
                     </li>
                     <li>
-                        <a href="info.html">Info</a>
+                        <a href="info.html">Roster Form</a>
                     </li>
                     <li>
-                        <a id="status" class="glyphicon glyphicon-user"> href="#">Login</a>
+                        <a href="#">Login</a>
                     </li>
                 </ul>
             </div>
@@ -148,8 +109,14 @@
 
         <div class="row">
             <div class="col-lg-12">
-                <h1>Greenwich Rugby</h1>
-                <p>Greenwich high school rugby was started in the 1980s and has been growing strong since. On April 23rd they beat Xavier, a school previously ranked number 6 in the country.</p>
+                <h1>About Rugby</h1>
+                <p>With 15 players per side, a rugby team is divided into forwards and backs.  Forwards are usually the larger stronger players on the team.  Their main job is to win possession of the ball.  The backs are often smaller, faster, and more agile and typically exploit the ball possessions, which are won by the forwards.  Both the forwards and backs play at the same time.  All 15 players assemble on the field, called a pitch, and the match starts with a kickoff.  The receiving team generally tries to move the ball downfield to score.  However, in attempting to score, the team cannot pass the ball forward or block.  The defenders can only tackle the ball carrier.
+After the ball carrier is tackled, there is a scramble for the ball.  Hence a tackle does not stop play in Rugby.  Once tackled, the player must release the ball immediately so play may continue.  The tackled ball carrier should attempt to release the ball advantageously toward his or her team.  Still alive, any player may pick up the ball.
+When players from both sides fight for the ball when it is on the ground, the situation is known as a “ruck”.  This can be described as the most dynamic action of the game.  The team that retains ball possession during the tackles and ensuring rucks has an advantage over the other team.
+Sometimes the ball is buried during a tackle, or a player commits a minor infraction of the laws (a penalty).  If the team that has not offended doesn't first gain an advantage from the continuance of play, the referee will stop play and call for a scrum to restart the match.  The non-offending team has the advantage of putting the ball into the scrum and, therefore, will most often win possession.
+During a scrum the ball must be worked backwards, and the player’s hand cannot touch the ball in the scrum.  When the ball emerges, open play resumes.  The remaining players who are not involved in the scrum must stay behind their respective offside line.
+Once a team has worked the ball downfield and crossed the opposing team’s goal line, and forced the ball onto the ground with downward pressure, a try is scored.  Each try is worth 5 points.  After each try, the scoring team has the opportunity to score 2 more points with a conversion.
+Both teams play to score tries during two 40-minute halves (35 minutes for high school games).</p>
             </div>
         </div>
 
@@ -173,7 +140,6 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/myjs.js"></script>
 
     <!-- Script to Activate the Carousel -->
     <script>
@@ -183,13 +149,5 @@
     </script>
 
 </body>
-    
-<script src="js/myjs.js"></script>
-<script src="https://apis.google.com/js/platform.js" async defer></script>
-<button type="button" class="btn btn-primary" onclick="firebase.auth().signInWithRedirect(provider);">Sign In With Google</button>
-<button type="button" class="btn btn-primary" onclick="firebase.auth().signOut().then(function() {
-  // Sign-out successful.
-}, function(error) {
-  // An error happened.
-});">Sign Out Of Google</button>
+
 </html>
