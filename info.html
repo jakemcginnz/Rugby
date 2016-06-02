@@ -106,38 +106,17 @@
 
     <!-- Page Content -->
     <br><br><br>
-    <div class="row">
-        <div class="col-md-2 col-md-offset-5">
-    <form id="playerinfo" onsubmit="playerProfile()">
-  <fieldset class="form-group">
-    <label for="formGroupExampleInput">Full name</label>
-    <input type="text" class="form-control" id="fullname" placeholder="First Last">
-  </fieldset>
-  <select id = "grade" form="playerinfo">
-    <option value="Blank"></option>
-    <option value="Freshman">Freshman</option>
-    <option value="Sophmore">Sophmore</option>
-    <option value="Junior">Junior</option>
-    <option value="Senior">Senior</option>
-  </select>
-  <select id = "position" form="playerinfo">
-    <option value="Blank"></option>
-    <option value="Prop">Prop</option>
-    <option value="Hooker">Hooker</option>
-    <option value="Flanker">Flanker</option>
-    <option value="Lock">Lock</option>
-    <option value="8">8</option>
-    <option value="Scrumhalf">Scrumhalf</option>
-    <option value="Flyhalf">Flyhalf</option>
-    <option value="Center">Center</option>
-    <option value="Fullback">Fullback</option>
-    <option value="Wing">Wing</option>
-  </select>
-  <br>
-  <button id="go" type="submit" form="">Create profile</button>
+<form class="form-inline">
+  <div class="form-group">
+    <label for="exampleInputName2">Name</label>
+    <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail2">Email</label>
+    <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
+  </div>
+  <button type="submit" class="btn btn-primary">Send invitation</button>
 </form>
-</div>
-</div>
         <hr>
         <!-- Footer -->
         <footer>
