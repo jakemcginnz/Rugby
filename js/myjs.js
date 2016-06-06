@@ -20,3 +20,17 @@ firebase.auth().onAuthStateChanged(function(user) {
     document.getElementById("status").innerHTML = "Not signed in";
   }
 });
+
+function functionname() {
+  var email = $("#emailFieldID").val();
+  var name = $("#nameFieldID").val();
+  var pw = $("#passwordFieldID").val();
+  firebase.auth().createUserWithEmailAndPassword(email, pw).then(function(user){
+    //they're finished!
+    var profile = {
+      displayName: name
+    };
+    }
+    user.updateProfile(profile);
+  });
+}
