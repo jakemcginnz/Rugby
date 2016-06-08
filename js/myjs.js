@@ -31,4 +31,5 @@ function SignUp() {
     };
     });
     user.updateProfile(profile);
+    console.log("Signed Up!")
   };
