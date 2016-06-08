@@ -37,7 +37,7 @@ function functionname() {
     var profile = {
       displayName: name
     };
-    }
+    };
     user.updateProfile(profile);
   });
 }
