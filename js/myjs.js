@@ -20,14 +20,6 @@ firebase.auth().onAuthStateChanged(function(user) {
     document.getElementById("status").innerHTML = "Not signed in";
   }
 });
-$( document ).ready(function() {
-    if (user) {
-    document.getElementById("status").innerHTML = "Signed in";
-  } else {
-    document.getElementById("status").innerHTML = "Not signed in";
-  }
-});
-
 function functionname() {
   var email = $("#InputEmail").val();
   var name = $("#InputName").val();
