@@ -20,7 +20,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     document.getElementById("status").innerHTML = "Not signed in";
   }
 });
-function functionname() {
+function SignUp() {
   var email = $("#InputEmail").val();
   var name = $("#InputName").val();
   var pw = $("#InputPassword").val();
