@@ -21,6 +21,7 @@ firebase.auth().onAuthStateChanged(function(user) {
   }
 });
 function SignUp() {
+  console.log("Starting Signup");
   var email = $("#InputEmail").val();
   var name = $("#InputName").val();
   var pw = $("#InputPassword").val();
@@ -31,5 +32,5 @@ function SignUp() {
     };
     });
     user.updateProfile(profile);
-    console.log("Signed Up!")
+    console.log("Signed Up!");
   };
