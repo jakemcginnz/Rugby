@@ -22,9 +22,9 @@ firebase.auth().onAuthStateChanged(function(user) {
 });
 
 function functionname() {
-  var email = $("#emailFieldID").val();
-  var name = $("#nameFieldID").val();
-  var pw = $("#passwordFieldID").val();
+  var email = $("#InputEmail").val();
+  var name = $("#InputName").val();
+  var pw = $("#InputPassword").val();
   firebase.auth().createUserWithEmailAndPassword(email, pw).then(function(user){
     //they're finished!
     var profile = {
