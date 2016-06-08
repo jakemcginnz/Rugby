@@ -30,7 +30,8 @@ function SignUp() {
     var profile = {
       displayName: name
     };
-    });
     user.updateProfile(profile);
+    });
+    
     console.log("Signed Up!");
   };
