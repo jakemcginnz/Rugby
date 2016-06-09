@@ -40,6 +40,6 @@ function SignUp() {
   console.log(errorCode, errorMessage);
 });
 };
-function SignOut  {
+function SignOut() {
 firebase.auth().signOut()
 }
