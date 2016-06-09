@@ -44,4 +44,5 @@ function SignUp() {
 function SignOut() {
   firebase.auth().signOut();
   CheckLogin();
+  console.log("signed Out")
 }
