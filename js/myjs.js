@@ -34,12 +34,10 @@ function SignUp() {
  function LogIn() {
    var email = $("#LoginEmail").val();
    var password = $("#LoginPassword").val();
-  firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
-  var errorCode = error.code;
-  var errorMessage = error.message;
-  console.log(errorCode, errorMessage);
-});
+  firebase.auth().signInWithEmailAndPassword(email, password);
+  console.log("Logged In!");
 };
 function SignOut() {
-firebase.auth().signOut()
+firebase.auth().signOut();
+console.log("Signed Out!");
 }
