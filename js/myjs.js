@@ -39,7 +39,7 @@ function SignUp() {
   console.log("Logged In!");
   return false;
 }
-function SignOut() {
+function SignOutUser() {
   firebase.auth().signOut();
   console.log("signed Out")
 }
