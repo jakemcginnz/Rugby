@@ -14,6 +14,7 @@ function makeApiCall() {
 var provider = new firebase.auth.GoogleAuthProvider();
 provider.addScope('https://www.googleapis.com/auth/plus.login');
 $( document ).ready(function() {
+  var user = firebase.auth().currentUser;
   if (user) {
     document.getElementById("status").innerHTML = "Signed in";
   } else {
