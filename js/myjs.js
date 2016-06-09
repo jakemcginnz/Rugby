@@ -38,6 +38,7 @@ function SignUp() {
   firebase.auth().signInWithEmailAndPassword(email, password);
   console.log("Logged In!");
   CheckLogin();
+  return false;
 }
 function SignOut() {
   firebase.auth().signOut();
