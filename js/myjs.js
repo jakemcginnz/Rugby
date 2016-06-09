@@ -33,7 +33,7 @@ function SignUp() {
   };
  function LogIn() {
    var email = $("#LoginEmail").val();
-   var email = $("#LoginEmail").val();
+   var password = $("#LoginPassword").val();
   firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
   var errorCode = error.code;
   var errorMessage = error.message;
