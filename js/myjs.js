@@ -32,7 +32,8 @@ function SignUp() {
     user.updateProfile(profile);
     });
   };
- function LogIn() {
+ function LogIn(e) {
+   e.preventDefault();
    var email = $("#LoginEmail").val();
    var password = $("#LoginPassword").val();
   firebase.auth().signInWithEmailAndPassword(email, password);
