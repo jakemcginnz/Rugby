@@ -35,9 +35,10 @@ function SignUp() {
  function LogIn() {
    var email = $("#LoginEmail").val();
    var password = $("#LoginPassword").val();
-  firebase.auth().signInWithEmailAndPassword(email, password);
+  firebase.auth().signInWithEmailAndPassword(email, password).then(function(){
+    CheckLogin();
+  });
   console.log("Logged In!");
-  CheckLogin();
   return false;
 }
 function SignOut() {
