@@ -32,7 +32,7 @@ function SignUp() {
     user.updateProfile(profile);
     });
   };
- function LogIn(e) {
+ function LogIn() {
    var email = $("#LoginEmail").val();
    var password = $("#LoginPassword").val();
   firebase.auth().signInWithEmailAndPassword(email, password);
