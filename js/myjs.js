@@ -39,4 +39,11 @@ function SignUp() {
   var errorMessage = error.message;
   console.log(errorCode, errorMessage);
 });
+};
+function SignOut  {
+firebase.auth().signOut().then(function() {
+  // Sign-out successful.
+}, function(error) {
+  // An error happened.
+});
 }
