@@ -13,14 +13,13 @@ function makeApiCall() {
 }
 var provider = new firebase.auth.GoogleAuthProvider();
 provider.addScope('https://www.googleapis.com/auth/plus.login');
-function CheckLogin() {
-  var user = firebase.auth().currentUser;
+firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     document.getElementById("status").innerHTML = "Signed in";
   } else {
     document.getElementById("status").innerHTML = "Not signed in";
   }
-};
+});
 function SignUp() {
   var email = $("#InputEmail").val();
   var name = $("#InputName").val();
@@ -36,13 +35,11 @@ function SignUp() {
    var email = $("#LoginEmail").val();
    var password = $("#LoginPassword").val();
   firebase.auth().signInWithEmailAndPassword(email, password).then(function(){
-    CheckLogin();
   });
   console.log("Logged In!");
   return false;
 }
 function SignOut() {
   firebase.auth().signOut();
-  CheckLogin();
   console.log("signed Out")
 }
