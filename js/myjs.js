@@ -52,3 +52,4 @@ if (user != null) {
   });
 }
 console.log("got here")
+profile();
