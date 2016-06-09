@@ -51,5 +51,3 @@ if (user != null) {
     console.log("  Email: "+profile.email);
   });
 }
-console.log("got here")
-profile();
