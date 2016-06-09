@@ -20,7 +20,7 @@ function CheckLogin() {
   } else {
     document.getElementById("status").innerHTML = "Not signed in";
   }
-});
+};
 function SignUp() {
   var email = $("#InputEmail").val();
   var name = $("#InputName").val();
