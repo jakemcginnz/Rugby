@@ -13,7 +13,7 @@ function makeApiCall() {
 }
 var provider = new firebase.auth.GoogleAuthProvider();
 provider.addScope('https://www.googleapis.com/auth/plus.login');
-firebase.auth().onAuthStateChanged(function(user) {
+$( document ).ready(function) {
   if (user) {
     document.getElementById("status").innerHTML = "Signed in";
   } else {
