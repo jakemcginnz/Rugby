@@ -38,7 +38,7 @@ function SignUp() {
   });
   console.log("Logged In!");
   return false;
-}
+};
 function SignOutUser() {
   firebase.auth().signOut();
   console.log("signed Out")
