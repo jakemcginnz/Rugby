@@ -54,3 +54,4 @@ if (user != null) {
     console.log("  Photo URL: "+profile.photoURL);
   });
 }
+console.log("got here")
