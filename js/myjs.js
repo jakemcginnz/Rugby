@@ -43,11 +43,3 @@ function SignOutUser() {
   firebase.auth().signOut();
   console.log("signed Out")
 }
-var user = firebase.auth().currentUser;
-
-if (user != null) {
-  user.providerData.forEach(function (profile) {
-    console.log("  Name: "+profile.displayName);
-    console.log("  Email: "+profile.email);
-  });
-}
