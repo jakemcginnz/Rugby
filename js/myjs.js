@@ -13,7 +13,7 @@ function makeApiCall() {
 }
 var provider = new firebase.auth.GoogleAuthProvider();
 provider.addScope('https://www.googleapis.com/auth/plus.login');
-$( document ).ready(function() {
+function CheckLogin() {
   var user = firebase.auth().currentUser;
   if (user) {
     document.getElementById("status").innerHTML = "Signed in";
@@ -37,7 +37,9 @@ function SignUp() {
    var password = $("#LoginPassword").val();
   firebase.auth().signInWithEmailAndPassword(email, password);
   console.log("Logged In!");
+  CheckLogin();
 }
 function SignOut() {
-  firebase.auth().signOut()
+  firebase.auth().signOut();
+  CheckLogin();
 }
