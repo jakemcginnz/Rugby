@@ -25,10 +25,18 @@ function SignUp() {
   var name = $("#InputName").val();
   var pw = $("#InputPassword").val();
   firebase.auth().createUserWithEmailAndPassword(email, pw).then(function(user){
-    //they're finished!
     var profile = {
       displayName: name
     };
     user.updateProfile(profile);
     });
   };
+ function LogIn() {
+   var email = $("#LoginEmail").val();
+   var email = $("#LoginEmail").val();
+  firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
+  var errorCode = error.code;
+  var errorMessage = error.message;
+  console.log(errorCode, errorMessage);
+});
+}
