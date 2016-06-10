@@ -53,7 +53,7 @@ auth.sendPasswordResetEmail(emailAddress).then(function() {
  console.log("Error!!!")
 });
 }
-if (reset===true) {
+if (r == true) {
   console.log("True")
 } else {
   console.log("False")
