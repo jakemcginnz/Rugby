@@ -48,5 +48,5 @@ function ResetPassword() {
   var emailAddress = $("#ResetPw").val();
 auth.sendPasswordResetEmail(emailAddress).then(function() {
   confirm("Check your email!")
-};
+});
 }
