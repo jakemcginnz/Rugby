@@ -42,7 +42,7 @@ function SignUp() {
 function SignOutUser() {
   firebase.auth().signOut();
   console.log("signed Out")
-}
+};
 function ResetPassword() {
   var auth = firebase.auth();
   var emailAddress = "user@example.com";
@@ -50,6 +50,6 @@ function ResetPassword() {
 auth.sendPasswordResetEmail(emailAddress).then(function() {
   Alert
 }, function(error) {
-  // An error happened.
+ console.log("Error!!!")
 });
 }
