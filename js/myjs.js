@@ -43,7 +43,7 @@ function SignOutUser() {
   firebase.auth().signOut();
   console.log("signed Out")
 }
-Function ResetPassword() {
+function ResetPassword() {
   var auth = firebase.auth();
   var emailAddress = "user@example.com";
 
