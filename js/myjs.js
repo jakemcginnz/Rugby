@@ -25,6 +25,7 @@ function SignUp() {
   var name = $("#InputName").val();
   var pw = $("#InputPassword").val();
   firebase.auth().createUserWithEmailAndPassword(email, pw).then(function(user){
+    user.sendEmailVerification(); 
     var profile = {
       displayName: name
     };
