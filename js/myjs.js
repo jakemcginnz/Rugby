@@ -45,16 +45,8 @@ function SignOutUser() {
 };
 function ResetPassword() {
   var auth = firebase.auth();
-  var emailAddress = "user@example.com";
-
+  var emailAddress = $("#ResetPw").val();
 auth.sendPasswordResetEmail(emailAddress).then(function() {
-  Alert
-}, function(error) {
- console.log("Error!!!")
-});
-}
-if (r == true) {
-  console.log("True")
-} else {
-  console.log("False")
+  confirm("Check your email!")
+};
 }
