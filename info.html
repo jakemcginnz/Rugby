@@ -121,6 +121,14 @@
 </form>
 </div>
 </div>
+<hr>
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+<button type="button" class="btn btn-primary" onclick="firebase.auth().signInWithRedirect(provider);">Sign In With Google</button>
+<button type="button" class="btn btn-primary" onclick="firebase.auth().signOut().then(function() {
+  // Sign-out successful.
+}, function(error) {
+  // An error happened.
+});">Sign Out Of Google</button>
         <hr>
         <!-- Footer -->
         <footer>
