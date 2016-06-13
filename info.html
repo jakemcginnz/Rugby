@@ -167,6 +167,19 @@
     <button type="button" class="btn btn-primary" onclick="SignOutUser()">Sign Out</button>
   </div>
   </div>
+  <hr>
+ <div class="row">
+ -        <div class="col-md-2 col-md-offset-5">
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+<button type="button" class="btn btn-primary" onclick="firebase.auth().signInWithRedirect(provider);">Sign In With Google</button>
+<button type="button" class="btn btn-primary" onclick="firebase.auth().signOut().then(function() {
+  // Sign-out successful.
+}, function(error) {
+  // An error happened.
+});">Sign Out Of Google</button>
+        <hr>
+        </div>
+        </div>
         <!-- Footer -->
         <footer>
             <div class="row">
